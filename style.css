@@ -1,8 +1,8 @@
 /* ----------------------------------
 
-Theme Name: Grant
-Author: PixelShow
-Author URI: http://pixel-show.com
+Theme Name: Upwork-Blogger
+Author: Jaideep Ghosh
+Author URI: https://jaideepghosh.blogspot.in
 Description: Personal Portfolio Template
 Version: 1.0
 
@@ -847,7 +847,7 @@ fieldset label {
   position: relative; }
 
 .side-cont .close-button {
-  background: url(../images/close.png) no-repeat;
+  background: url(https://raw.githubusercontent.com/jaideepghosh/blogger/master/close.png) no-repeat;
   background-position: center;
   position: absolute;
   right: 20px;
