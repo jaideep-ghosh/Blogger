@@ -128,7 +128,7 @@ p{
     height: 185px;
     position: relative;
     margin: 90px auto 0px;
-    background-image: url("../img/workers.svg");
+    background-image: url("https://cdn.rawgit.com/jaideepghosh/blogger/0c63954f/Under-Construction-Template/assets/img/workers.svg");
     background-repeat: no-repeat;
     background-position: center bottom;
     background-color: transparent;
@@ -138,7 +138,7 @@ p{
 .workers .left_hand{
     width: 80px;
     height: 74px;
-    background-image: url("../img/hand.svg");
+    background-image: url("https://cdn.rawgit.com/jaideepghosh/blogger/0c63954f/Under-Construction-Template/assets/img/hand.svg");
     background-repeat: no-repeat;
     background-position: center bottom;
     background-color: transparent;
@@ -196,7 +196,7 @@ p{
     width: 73px;
     height: 87px;
     position: absolute;
-    background-image: url("../img/hand2.svg");
+    background-image: url("https://cdn.rawgit.com/jaideepghosh/blogger/0c63954f/Under-Construction-Template/assets/img/hand2.svg");
     background-repeat: no-repeat;
     background-position: left top;
     background-color: transparent;
@@ -369,7 +369,7 @@ p{
     margin: -100px 0 0 -100px;
     width: 200px;
     height: 200px;
-    background-image: url("../img/ajax-loader.gif");
+    background-image: url("https://cdn.rawgit.com/jaideepghosh/blogger/0c63954f/Under-Construction-Template/assets/img/ajax-loader.gif");
     background-position: center;
     background-repeat: no-repeat;
 }
