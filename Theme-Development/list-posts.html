@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title>Blogger API Example</title>
+    <style>
+        img{
+            padding: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        var BloggerApiUrl = "https://www.googleapis.com/blogger/v3/blogs/";
+        var BloggerAppKey="AIzaSyBrpn1eqnRex1VZEVXeR1lonnUA3YPoQiw";
+        var BlogId="1233989123907726722";
+
+        var totalPosts=0;
+        $.ajax({
+            url: BloggerApiUrl+BlogId+"/posts?key="+BloggerAppKey,
+            dataType: 'jsonp',
+            success: function(data){
+                var posts=data['items'];
+                $.each(posts,function(key,value){
+                    var post = value;
+                    var title = post['title'];
+                    var content = post['content'];
+                    var thumbnail = "";
+
+                    //Get the thumbnail Image.
+                    srcWithQuotes = content.match(/src\=([^\s]*)\s/);
+                    if(srcWithQuotes!=null){
+                        var thumbImageRaw = srcWithQuotes[1];
+                        thumbImage = thumbImageRaw.match(/\"(.*)\"/).pop();
+                        thumbnail = thumbImage;
+                        
+                        createImage(thumbnail);
+                    }
+                });
+                console.log(posts);
+            },
+            error: function(XHR, textStatus, errorThrown) {
+                alert("Error While fetching total posts.");
+            }
+        });
+
+        function createImage(imgUrl){
+            var img = $('<img />').attr({
+                'src': imgUrl,
+                'width': 250
+            }).appendTo('#content');
+            
+        }
+        
+        // $.ajax({
+        //     url: BloggerApiUrl+BlogId+"?key="+BloggerAppKey,
+        //     dataType: 'jsonp',
+        //     success: function(data){
+        //         var totalPosts=data['posts']['totalItems'];
+        //         console.log(totalPosts);
+        //     },
+        //     error: function(XHR, textStatus, errorThrown) {
+        //         alert("Error While fetching total post count.");
+        //     }
+        // });
+        
+    </script>
+  </body>
+</html>
